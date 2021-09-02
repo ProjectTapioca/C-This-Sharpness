@@ -1,2 +1,2 @@
 # C-This-Sharpness
-C# learning repository specifically for REPLIT until github workspaces comes out.
+C# learning repository specifically for REPLIT Cloud IDE until github workspaces comes out.
