@@ -2,7 +2,7 @@ using System;
 
 namespace EssentialTraining
 {
-	class SimpleArray
+	public class SimpleArray
 	{
 		//Instance variable called grocery list and it's a string array
 		public string[] GroceryList; //property that consist a list of strings
