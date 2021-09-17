@@ -1,0 +1,56 @@
+Unit Testing
+Agile Development
+Test-Driven Development
+	Create or Change Code
+	Create a Repeatable Test
+	Review the Results
+
+Unit Test
+	The goal is 100% coverage
+	Tests can be run from within Visual Studio for developer productivity
+	Unit tests can be automated as part of a continuous integration process using a product like Jenkins, TeamCity, or Team Foundation Server
+
+	
+Create a Project in Visual Studio and name it 'Essential Training'
+
+Create a test project in Visual Studio
+
+Watch the unit testing portion of EssentialTraining Part2
+
+Array
+	A way to store more than one value in a variable at one time
+	Have a fixed size, want to instantiate the size
+	Ex:
+		var groceryList = new string[4];
+
+	More Array
+		Can create an array all at once by doing
+		var secondgroceryList = new string[4] { "Milk", "Eggs", "Cheese", "Apples"};
+
+	Another way of creating an Array as an instance variable
+		public string[] GroceryList;
+
+Check file SimpleArray to see how a property of an array is created
+
+
+Multi-Dimensional Arrays
+	Arrays that contain Arrays
+	var multi = new int[3, 4]
+	{
+		{0,1,2,3},
+		{4,5,6,7},
+		{8,9,10,11}
+	};
+
+	To call on a specific position you do what is similar with a single-dimensional array
+		multi[2, 3]
+
+		Keep in mind; this is calling upon technically speaking, the third row in the array. So the
+		output would be 11
+
+		
+LINQ
+	Set of extension classes that hook onto pretty much any kind of collection, and they allow us to do some really interesting things with our collections.
+		
+		
+
