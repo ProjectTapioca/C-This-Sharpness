@@ -52,5 +52,12 @@ Multi-Dimensional Arrays
 LINQ
 	Set of extension classes that hook onto pretty much any kind of collection, and they allow us to do some really interesting things with our collections.
 		
+	What we can do is creaate a method that will extend an existing class without actually subclassing it, and without actually altering the code for the class itself.
+	Powerful way of adding functions into an existing class, can do this on arrays, lists, and lots of different things.
 		
 
+Dictionaries
+	A list that allowed you to use a key value pair situation so you could, instead of a number, assign some meaningful string
+
+	Flow Control
+		File FlowControl shows different ways of writing the if statement
