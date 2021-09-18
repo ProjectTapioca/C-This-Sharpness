@@ -1,0 +1,237 @@
+Interesting one to note is 
+	var
+		It automatically detects what the variable assigned is. Also known as implicit coding
+		
+Strings
+	Have to use double quotes for strings. Single quotes represent Char
+
+int vs uint
+	int goes from -[big value] to a big value
+	uint goes from 0 to a bigger value
+	
+double vs float
+	Big topic here may have to do more research but important to note
+	
+	float pie = 3.14f
+	
+	This has to be done because without the f, the language will think the value is a double and not a float
+	
+https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types
+
+
+
+[data_type].(method or property)
+
+	int.Parse("15)
+	>>15
+	
+	var test = "abcde";
+	test.ToUpper()
+	>>ABCDE
+	
+	Essentially anything can be an object such as
+	
+	var birthday = new DateTime(1967, 12, 19)
+	
+	Now this is a DateTime object called birthday based on birthday
+	
+C# uses lower case string
+Java uses upper case S String
+
+C# can use both upper or lower case
+
+
+Used methods on a string object like .ToUpper() .ToLower() .Substring
+
+There are properties as well like
+.Length
+
+
+sb = new StringBuilder();
+sb.Append("It was the best of times, it was the worst of times");
+sb.Append("Here is another string being added to sb");
+
+
+var city = "Dallas";
+var temperature = 103.4f;
+var currentDt = DateTime.Now;
+string.Format("Welcome to {0}.  The time is {1}. The temperature is {2}.", city,  currentDt, temperature)
+
+https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-5.0
+
+
+You have to know what kind of number it is you're parsing. For ex:
+
+int Parse("15");
+>>15
+
+var test = "15,234";
+int.Parse(test.Replace(",", ""))
+>>15234
+
+int result;
+int.TryParse("15,234", out result)
+>>false
+
+TryParse returns a bool
+
+int.TryParse("15234", out result)
+>>true
+result
+>15234
+
+The out specifies where to put the parsed number, if the parse works
+Using Tryparse allows us to test the number before committing to parsing it
+
+Other database types have the abilities to parse
+
+
+Same in general
++
+-
+*
+/
+%
+test = test + 1 [ test++]
+
+test += 5;
+test = test + 5
+
+Sophisticated Computations
+Class: Math
+
+	Math.[method]
+	
+	Can do pretty much everything a ti calculator can do
+	
+	Math.Abs(-5)
+	>>5
+	
+	
+	
+The compiler treats constants as a hard coded number and decreases computation speed. Used to optimize your code.
+
+const float pi = 3.14f
+
+enum weekDays { Monday, Tuesday, Wednesday, Thursday, Friday };
+var someDay = weekDays.Monday;
+
+When selecting Monday, the IDE will show the other options that is set in enum. This can also be used as a way to not have to remember the index position for each value in the enum
+
+
+var birthday = DateTime(1997, 24, 11)
+
+
+Add encapsulation to your properties but certain cases don't necessarily need logic
+
+data_type variable_name { get; set; }
+
+
+Limit visibility to classes, methods, properties, anything that's on your class in such a way that you can't accidentally or unintentionally change something
+
+
+public means that whatever you're modifying with your access modifier can be seen outside of the class. Private, on the other hand, means that it can only be seen inside of this class.
+
+
+The main use of constructors is to initialize the private fields of the class while creating an instance for the class. 
+The point of a constructor is to handle initialization
+
+	Review the replit for more information
+	
+	
+Used to manipulate the data we have input into the class. Methods take access modifiers just like data elements
+
+
+Exits the method and returns the value of whatever it is you ran through it
+
+Two methods with the same name but different method signature
+
+
+A different way of writing a method in C Sharp
+
+
+Methods that you can call without instantiating the class.
+	public static in AverageThreeScores(int a, int b, int c)
+	{
+		var result = (a + b + c) / 3;
+		return result;
+	}
+	
+The word static in front of the function name allows us to see the method from the outside of the class without instantiating it.
+
+
+The default ToString method converts other data type values into a string. Sometimes this isn't useful so it's better to override the method of ToString and instead, put in something of our own.
+	public override string ToString()
+	{
+		var sb = new StringBuilder();
+		sb.AppendLine(Name);
+		sb.AppendLine(.Address);
+		
+		return sb.ToString();
+	}
+	
+	
+	
+This requires using Visual Studio, refer to LinkedIn Video 'Creating a User Interface'
+
+
+Can create a class with all of the attributes and methods that are going to be common, and we put that in what we call a base class, and then we can have two or more classes inherit from that, and then we just put in the things that are unique to each of those classes. 
+	Ex: Student and Teacher classes, they all have first name, last name, email, but only teachers teach a specific subject
+	
+	
+By making a class abstract, it will prevent programmers from directly instantiating that class
+	abstract class Person
+	
+Also to note, make sure to make it public so other classes can inherit from it
+
+	public abstract class Person
+	
+Then in the subclass
+
+	public class Teacher : Person
+	
+Person is the abstract class that we are inheriting from.
+
+
+These are designed sorta the same way as an Abstract class where you can't instantiate them or use them directly.
+
+Can put on abstract methods on classes that aren't abstract themselves
+
+If we put an abstract method in a base class, the subclass must implement the inherited abstract method. 
+
+Abstract methods in a base class MUST be implemented in all sub-classes
+
+
+If we want something to be eligible to be overridden in a sub-class, we either make it abstract or make a virtual method
+
+Virtual methods unlike abstract methods, are optional. You can use as is or do something special with it
+
+
+What happens when you have two things that apparently seem to go together, but they have very much in common in the way of properties? 
+	Ex: English Paper, Science Project
+	
+An interface is a feature of Object Oriented Programming that allows you to require a class to implement certain properties and methods. 
+
+It kind of acts like a contract between all of your programmers. What you're effectively saying with an interface is that if you use an interface, you must implement a certain method signature or a certain property and it must be named a certain way.
+
+You define the properties and methods we want to appear on our objects that implement the interface. You don't actually write logic or code in the interface, you only define the structure.
+
+	public interface IScored
+	{
+		float Score { get; set; }
+		float MaximumScore { get; set; }
+	}
+	
+Interfaces work the same as inheritance:
+	
+	public class ScienceExperiment : IScored
+	
+Interfaces can also be passed as types
+	 
+	public static IScored BestOfTwo()
+
+
+Extension Methods
+	Enables you to 'add' methods to existing types without creating a new derived type, recompiling, or otherwise modifying the original source code.
+
+	This allows us to extend a class that someone else creates when we do not necessarily have access to the source code
