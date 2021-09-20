@@ -59,5 +59,35 @@ LINQ
 Dictionaries
 	A list that allowed you to use a key value pair situation so you could, instead of a number, assign some meaningful string
 
-	Flow Control
-		File FlowControl shows different ways of writing the if statement
+Collection Initializer
+	Specify one or more elemt initializers when you initialize a collection type that implements IEnumerable
+
+Flow Control
+	File FlowControl shows different ways of writing the if statement
+
+	If statement
+	If- else statement
+
+	Switch
+		This works in exact fashion as the if else structure
+
+	OR logical operator 
+		||
+
+	AND logical operator
+		&&
+
+	NOT logical operator
+		!=
+
+	For Loop
+		for(var i = 0; i < 100; i++)
+
+		First part is a variable that holds a counter
+		Second part is the condition that we're looking to satisfy
+			This will start counting at 0 and go up to 99
+		Third part is where we do the incrementation
+
+	ForEachLoop
+		For each 'thing' in 'things' run the following code
+
