@@ -95,7 +95,14 @@ Flow Control
 	    Wil always execute its code block at least one time because the condition is executed after the code block
 	    
 	Continue and Break
-	    Continue tells the code to skip everything else underneath (if there is a condition that is met) and go back around the loop                one more time
+	    Continue tells the code to skip everything else underneath (if there is a condition that is met) and go back around the loop one more time
 	    Continue is a great way to skip a portion of the loop without completely leaving it.
 	    
 	    Break on the other hand will not run anything underneath and break out of the loop completely
+
+Try-Catch
+    Try Catch code blocks is meant to catch an error and if it catches an error, it will do what is coded in the catch statement
+    This is great for catching errors or if an error occurs, then it will do something
+    
+Finally method
+    By using a finally block, you can clean up any resources that are allocated in a try block, and you can run code even if an exception occurs in the try block
